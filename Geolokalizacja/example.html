@@ -26,6 +26,11 @@
                 };
 
                 var mapa = new google.maps.Map(document.getElementById("mapa"), ustawienia);
+                var marker = new google.maps.Marker({
+                    map: mapa,
+                    position: wsp,
+                    title: "Jesteś tutaj"
+                });
             }
         </script>
     </head>
