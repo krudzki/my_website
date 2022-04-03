@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML - poziom 2</title>
+        <meta charset="utf-8">
+        <meta name="description" content="HTML - poziom 2">
+
+        <script>
+            function zapiszDane(){
+                localStorage.setItem(document.getElementById("daneWeNazwa").value, document.getElementById("daneWe").value);
+            }
+
+            function wyswietlDane(){
+                document.getElementById("daneWy").value = localStorage.getItem(document.getElementById("daneWyNazwa").value);
+            }
+
+            function kasujDane(){
+                localStorage.removeItem(document.getElementById("kasujDaneNazwa").value);
+            }
+        </script>
+    </head>
+    <body>
+        <p>Wprowadź dane: <input type="text" id="daneWe" /> Nazwa: <input type="text" id="daneWeNazwa" /></p>
+        <p>Odczytane dane: <input type="text" id="daneWy" /> Nazwa: <input type="text" id="daneWyNazwa" />></p>
+
+        <p><input type="button" value="Zapisz" onclick="ZapiszDane()" /></p>
+        <p><input type="button" value="Wyswietl" onclick="wyswietlDane()" /></p>
+        <p><input type="button" value="Kasuj" onclick="kasujDane()" /> Nazwa: <input type="text" id="kasujDaneNazwa" /></p>
+    </body>
+</html>
